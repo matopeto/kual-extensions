@@ -1,0 +1,40 @@
+{
+    "items": [
+    {
+        "name": "Helper",
+        "priority": -1,
+        "items": [
+        {
+            "name": "Screensaver",
+            "priority": 1,
+            "items": [
+            {
+                "name": "Show Status",
+                "priority": 1,
+                "action": "./bin/screensaver.sh",
+                "params": "status",
+                "exitmenu": false,
+                "refresh": false
+            },
+            {
+                "name": "Disable (Stay Awake)",
+                "priority": 2,
+                "action": "./bin/screensaver.sh",
+                "params": "off",
+                "exitmenu": false,
+                "refresh": false
+            },
+            {
+                "name": "Enable (Allow Sleep)",
+                "priority": 3,
+                "action": "./bin/screensaver.sh",
+                "params": "on",
+                "exitmenu": false,
+                "refresh": false
+            }
+            ]
+        }
+        ]
+    }
+    ]
+}

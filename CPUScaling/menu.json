@@ -1,0 +1,88 @@
+{
+    "items": [
+    {
+        "name": "Helper",
+        "priority": -1,
+        "items": [
+        {
+            "name": "CPU Scaling",
+            "priority": 2,
+            "items": [
+            {
+                "name": "ondemand (default) (currently set)",
+                "if": "\"/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\" \"ondemand\" -g",
+                "priority": 1,
+                "action": "./bin/governor.sh",
+                "params": "ondemand",
+                "exitmenu": false,
+                "refresh": true
+            },
+            {
+                "name": "ondemand (default)",
+                "if": "\"/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\" \"ondemand\" -g!",
+                "priority": 1,
+                "action": "./bin/governor.sh",
+                "params": "ondemand",
+                "exitmenu": false,
+                "refresh": true
+            },
+            {
+                "name": "powersave (currently set)",
+                "if": "\"/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\" \"powersave\" -g",
+                "priority": 2,
+                "action": "./bin/governor.sh",
+                "params": "powersave",
+                "exitmenu": false,
+                "refresh": true
+            },
+            {
+                "name": "powersave",
+                "if": "\"/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\" \"powersave\" -g!",
+                "priority": 2,
+                "action": "./bin/governor.sh",
+                "params": "powersave",
+                "exitmenu": false,
+                "refresh": true
+            },
+            {
+                "name": "performance (currently set)",
+                "if": "\"/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\" \"performance\" -g",
+                "priority": 3,
+                "action": "./bin/governor.sh",
+                "params": "performance",
+                "exitmenu": false,
+                "refresh": true
+            },
+            {
+                "name": "performance",
+                "if": "\"/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\" \"performance\" -g!",
+                "priority": 3,
+                "action": "./bin/governor.sh",
+                "params": "performance",
+                "exitmenu": false,
+                "refresh": true
+            },
+            {
+                "name": "conservative (currently set)",
+                "if": "\"/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\" \"conservative\" -g",
+                "priority": 4,
+                "action": "./bin/governor.sh",
+                "params": "conservative",
+                "exitmenu": false,
+                "refresh": true
+            },
+            {
+                "name": "conservative",
+                "if": "\"/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\" \"conservative\" -g!",
+                "priority": 4,
+                "action": "./bin/governor.sh",
+                "params": "conservative",
+                "exitmenu": false,
+                "refresh": true
+            }
+            ]
+        }
+        ]
+    }
+    ]
+}
