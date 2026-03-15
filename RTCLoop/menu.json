@@ -1,0 +1,50 @@
+{
+    "items": [
+    {
+        "name": "RTC Loop",
+        "priority": 3,
+        "items": [
+        {
+            "name": "Start (30min sleep, 60s init, 30s wake)",
+            "priority": 1,
+            "action": "./bin/rtcloop.sh",
+            "params": "start 1800 60 30",
+            "exitmenu": false,
+            "refresh": false
+        },
+        {
+            "name": "Start (15min sleep, 60s init, 30s wake)",
+            "priority": 2,
+            "action": "./bin/rtcloop.sh",
+            "params": "start 900 60 30",
+            "exitmenu": false,
+            "refresh": false
+        },
+        {
+            "name": "Start (60min sleep, 60s init, 30s wake)",
+            "priority": 3,
+            "action": "./bin/rtcloop.sh",
+            "params": "start 3600 60 30",
+            "exitmenu": false,
+            "refresh": false
+        },
+        {
+            "name": "Stop",
+            "priority": 4,
+            "action": "./bin/rtcloop.sh",
+            "params": "stop",
+            "exitmenu": false,
+            "refresh": false
+        },
+        {
+            "name": "Status",
+            "priority": 5,
+            "action": "./bin/rtcloop.sh",
+            "params": "status",
+            "exitmenu": false,
+            "refresh": false
+        }
+        ]
+    }
+    ]
+}
